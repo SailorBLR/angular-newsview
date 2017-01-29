@@ -1,0 +1,12 @@
+<div class="container-fluid">
+ <div class="row">
+  <div class="col-md-2">
+	<p>
+        Select source:
+        <select ng-model="$ctrl.currentSrc">
+          <option value="{{source.id}}" ng-repeat="source in $ctrl.sources">{{source.name}}</option>
+        </select>
+    </p>
+  </div>
+ </div>
+</div>
