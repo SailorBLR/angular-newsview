@@ -1,18 +1,17 @@
-/*'use strict';
+'use strict';
 
 angular.
-  module('phonecatApp').
+  module('newsView').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
       $locationProvider.hashPrefix('!');
 
       $routeProvider.
-        when('/phones', {
-          template: '<phone-list></phone-list>'
+        when('/newsItem/:itemId', {
+          template: '<news-item></news-item>'
         }).
-        when('/phones/:phoneId', {
-          template: '<phone-detail></phone-detail>'
-        }).
-        otherwise('/phones');
+        otherwise({
+			template: '<news-list class="view-frame"></news-list>'
+		});
     }
-  ]);*/
+ ]);

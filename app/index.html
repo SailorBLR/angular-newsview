@@ -2,8 +2,9 @@
 <html lang="en" ng-app="newsView">
   <head>
     <meta charset="utf-8">
-    <title>Google Phone Gallery</title>
+    <title>News Channel</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="style.css" />
 	
 	<script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -11,30 +12,32 @@
     <script src="app.config.js"></script>
 	<script src="news-source/news-source.module.js"></script>
     <script src="news-source/news-source.component.js"></script>
-    <!--<link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="app.animations.css" />
-
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="news-source/news-source.service.js"></script>
+	<script src="news-list/news-list.module.js"></script>
+    <script src="news-list/news-list.component.js"></script>
+	<script src="news-item/news-item.module.js"></script>
+    <script src="news-item/news-item.component.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	
     
-    <script src="app.animations.js"></script>
-    <script src="core/core.module.js"></script>
-    <script src="core/checkmark/checkmark.filter.js"></script>
-    <script src="core/phone/phone.module.js"></script>
-    <script src="core/phone/phone.service.js"></script>
-    
-    <script src="phone-detail/phone-detail.module.js"></script>
-    <script src="phone-detail/phone-detail.component.js"></script>-->
   </head>
+  <header>
+			<h1><a href="index.html">Box Press</a><span id="version">v1</span></h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><news-source class="current"></news-source></li>
+				</ul>
+			</nav>
+		</header>
   <body>
-
-    <div class="view-container">
-      <!--<div ng-view class="view-frame"></div>-->
-	  <news-source></news-source>
-    </div>
-
+	<div class="view-container">  
+		<div ng-view></div>
+	</div>
   </body>
 </html>

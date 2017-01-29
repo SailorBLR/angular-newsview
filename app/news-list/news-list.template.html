@@ -1,0 +1,17 @@
+<div class="col-md-10">
+      <!--Body content-->
+	  <div id="secwrapper">
+			<section>
+				<ul >
+					<li ng-repeat="article in articles" article-id="{{articles.indexOf(article)}}">
+						<article>
+							<a href="#!/newsItem/{{articles.indexOf(article)}}"><img src="{{article.urlToImage}}" width="480px" alt=""/></a>
+							<h1>{{article.title}}</h1>
+							<a href="#!/newsItem/{{articles.indexOf(article)}}" class="readmore">Read more</a>
+							<a href="#" class="save-for-later">Read later>>></a>
+						</article>
+					</li>
+				</ul>	
+			</section>
+		</div>
+</div>

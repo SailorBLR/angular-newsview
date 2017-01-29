@@ -2,12 +2,8 @@
 
 /*News view application register newsView*/
 angular.module('newsView', [
-  
-  'newsSource'
-]);
-
-/*'ngRoute',
-'ngAnimate',
   'ngRoute',
-  'core',
-  'phoneDetail',*/
+  'newsSource',
+  'newsList',
+  'newsItem'
+]);
