@@ -5,10 +5,10 @@ angular.
   module('newsItem').
   component('newsItem', {
     templateUrl: 'news-item/news-item.template.html',
-    controller: ['$http', '$scope', '$routeParams', '$rootScope', 
-      function NewsItemController($http, $scope, $routeParams, $rootScope) {
+    controller: ['$http', '$scope', '$routeParams', 'localStorageService',
+      function NewsItemController($http, $scope, $routeParams, localStorageService) {
 		var id = $routeParams.itemId;
-		var bigSrc = $rootScope.bigSrc;
+		var bigSrc = localStorageService.get('keyToSource');
 		if (typeof bigSrc !== 'undefined') {
 		$http
 				.get("https://newsapi.org/v1/articles?source="+ bigSrc +"&apiKey=2e9faeaf932f4190866fd7dbc6e6c570")

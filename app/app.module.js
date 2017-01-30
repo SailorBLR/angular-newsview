@@ -5,5 +5,7 @@ angular.module('newsView', [
   'ngRoute',
   'newsSource',
   'newsList',
-  'newsItem'
+  'newsItem',
+  'LocalStorageModule',
+  'createNews'
 ]);

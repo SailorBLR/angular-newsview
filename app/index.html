@@ -6,8 +6,10 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="style.css" />
 	
+	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+	
 	<script src="app.module.js"></script>
     <script src="app.config.js"></script>
 	<script src="news-source/news-source.module.js"></script>
@@ -17,21 +19,22 @@
     <script src="news-list/news-list.component.js"></script>
 	<script src="news-item/news-item.module.js"></script>
     <script src="news-item/news-item.component.js"></script>
+	<script src="create-news/create-news.module.js"></script>
+	<script src="create-news/create-news.component.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	
+	<base href="http://localhost:8000/index.html"/>
     
   </head>
   <header>
 			<h1><a href="index.html">Box Press</a><span id="version">v1</span></h1>
 			<nav>
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Home</a></li>
+					<li><a href="index.html">News</a></li>
+					<li><a href="/create">Create</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
-					<li><news-source class="current"></news-source></li>
 				</ul>
 			</nav>
 		</header>

@@ -1,0 +1,35 @@
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+	<legend>Adding news</legend>
+
+	<!-- Text input-->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="textinput">Title</label>  
+	  <div class="col-md-6">
+	  <input id="textinput" name="textinput" type="text" 
+	  placeholder="News title" class="form-control input-md" required="true" ng-model="newsItem.title">
+		
+	  </div>
+	</div>
+
+	<!-- Textarea -->
+	<div class="form-group">
+	  <label class="col-md-4 control-label" for="description">Description</label>
+	  <div class="col-md-6">                     
+		<textarea class="form-control" id="description" name="description" required="true"
+		ng-model="newsItem.description"></textarea>
+	  </div>
+	</div>
+
+</fieldset>
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="saveButton">Choice</label>
+  <div class="col-md-8">
+    <button id="saveButton" name="saveButton" class="btn btn-success" ng-click="save()">Create</button>
+    <button id="resetButton" name="resetButton" class="btn btn-danger" ng-click="reset()">Clear</button>
+  </div>
+</div>
+</form>
