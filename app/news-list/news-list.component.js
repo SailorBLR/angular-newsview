@@ -13,12 +13,15 @@ angular.
          if (newValue !== oldValue) {
 			 $scope.currentSrc = newValue;
 		 }
-		 if (localStorageService.get('keyToSource')!==null) {
+		 if ((localStorageService.get('keyToSource') !== null )
+		 && (localStorageService.get('keyToSource') !== localStorageService.get('lclSrc').id)) {
 			 $http
 				.get("https://newsapi.org/v1/articles?source="+ localStorageService.get('keyToSource') +"&apiKey=2e9faeaf932f4190866fd7dbc6e6c570")
 				.then(function(response){ 
 				$scope.articles = response.data.articles;
 			 });
+		 } else {
+				$scope.articles = localStorageService.get('lclSrc').articles;
 		 }
         });
 		

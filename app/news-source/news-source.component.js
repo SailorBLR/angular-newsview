@@ -12,6 +12,7 @@ angular.
 		 .get("https://newsapi.org/v1/sources?language=en")
 		 .then(function(response){
 			 $scope.sources = response.data.sources;
+			 $scope.sources.unshift(localStorageService.get('lclSrc'));
 			 if(localStorageService.get('keyToSource') == null) {
 				$scope.currentSrc = response.data.sources[0].id;
 				localStorageService.set('keyToSource',$scope.currentSrc);

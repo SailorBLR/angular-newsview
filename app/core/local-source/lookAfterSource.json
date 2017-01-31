@@ -1,9 +1,9 @@
 {
-	"id": "local-list",
-	"name": "Local news",
-	"description": "Local anton's news.",
+	"id": "look-after",
+	"name": "News for later",
+	"description": "Saved news list for later.",
 	"url": " ",
-	"category": "local",
+	"category": "later",
 	"language": "en",
 	"country": "us",
 	"urlsToLogos": {

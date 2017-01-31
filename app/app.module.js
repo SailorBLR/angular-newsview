@@ -7,5 +7,6 @@ angular.module('newsView', [
   'newsList',
   'newsItem',
   'LocalStorageModule',
-  'createNews'
+  'createNews',
+  'editNews'
 ]);

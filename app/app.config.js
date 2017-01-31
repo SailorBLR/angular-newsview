@@ -21,6 +21,9 @@ angular.
 		when('/create', {
           template: '<create-news class="view-frame"></create-news>'
         }).
+		when('/edit', {
+          template: '<edit-news class="view-frame"></edit-news>'
+        }).
         otherwise({
 		  template: '<news-list class="view-frame"></news-list>'
 		});

@@ -12,6 +12,7 @@
 	
 	<script src="app.module.js"></script>
     <script src="app.config.js"></script>
+	<script src="app.component.js"></script>
 	<script src="news-source/news-source.module.js"></script>
     <script src="news-source/news-source.component.js"></script>
 	<script src="news-source/news-source.service.js"></script>
@@ -21,13 +22,16 @@
     <script src="news-item/news-item.component.js"></script>
 	<script src="create-news/create-news.module.js"></script>
 	<script src="create-news/create-news.component.js"></script>
+	<script src="create-news/create-news.service.js"></script>
+	<script src="edit-news/edit-news.module.js"></script>
+	<script src="edit-news/edit-news.component.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
 	<script src="bower_components/angular-resource/angular-resource.js"></script>
 	<base href="http://localhost:8000/index.html"/>
     
   </head>
   <header>
-			<h1><a href="index.html">Box Press</a><span id="version">v1</span></h1>
+			<h1><a href="index.html">Box Press</a></h1>
 			<nav>
 				<ul>
 					<li><a href="#">Home</a></li>
@@ -38,7 +42,7 @@
 				</ul>
 			</nav>
 		</header>
-  <body>
+  <body ng-controller="newsViewCtrl">
 	<div class="view-container">  
 		<div ng-view></div>
 	</div>
