@@ -12,7 +12,14 @@ angular.
              $scope.newsItem = angular.copy($scope.defaultValues);
          };
 		 $scope.save = function() {
-			 SaveForLocal.addNewsItem($scope.newsItem);
+			 SaveForLocal.addNewsItem($scope.newsItem);	 
+			 $scope.newsItem = SaveForLocal.getFullNewsItem();
+			 var last = localStorageService.get('lclSrc').articles.length-1;
+			 var temp = localStorageService.get('lclSrc');
+
+			 temp.lastId = last;
+			 localStorageService.set('lclSrc',temp);
+			 
 			 window.location.href = "#/edit";
          };
      }

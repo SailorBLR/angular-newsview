@@ -12,6 +12,7 @@ angular.
 	weekday[4] = "Th";
 	weekday[5] = "F";
 	weekday[6] = "Sa";
+	var item = '';
 	  
     return {
         addNewsItem: function (newsItem) {
@@ -28,6 +29,10 @@ angular.
                 + date.getSeconds();
 			tempSrc['articles'].push(newsItem);
 			localStorageService.set('lclSrc',tempSrc);
-        }
+			item = newsItem;
+        },
+		getFullNewsItem: function () {
+			return item;
+		}
     };
 });

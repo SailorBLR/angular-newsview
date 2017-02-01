@@ -24,6 +24,9 @@ angular.
 		when('/edit', {
           template: '<edit-news class="view-frame"></edit-news>'
         }).
+		when('/later', {
+          template: '<later-news class="view-frame"></later-news>'
+        }).
         otherwise({
 		  template: '<news-list class="view-frame"></news-list>'
 		});

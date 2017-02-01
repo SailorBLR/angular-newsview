@@ -9,7 +9,7 @@
 							<a href="/newsItem/{{articles.indexOf(article)}}"><img src="{{article.urlToImage}}" width="480px" alt=""/></a>
 							<h1>{{article.title}}</h1>
 							<a href="/newsItem/{{articles.indexOf(article)}}" class="readmore">Read more</a>
-							<a href="" class="save-for-later">Read later>>></a>
+							<a href="" class="save-for-later" ng-click="addToLaterList(article,$index)">Read later>>></a>
 						</article>
 					</li>
 				</ul>	

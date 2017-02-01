@@ -1,20 +1,28 @@
 'use strict';
 
-/**Create news controller*/
+/**Edit news controller*/
 angular.
   module('editNews').
   component('editNews',  {
     templateUrl: 'edit-news/edit-news.template.html',
     controller: ['$scope', 'localStorageService',
-     function CreateNewsController($scope, localStorageService, SaveForLocal) {
-		 /*$scope.defaultValues = {title: " ", description: " "};
-         $scope.reset = function() {
-             $scope.newsItem = angular.copy($scope.defaultValues);
+     function CreateNewsController($scope, localStorageService) {
+		$scope.artId = localStorageService.get('lclSrc').lastId;
+		$scope.article = localStorageService.get('lclSrc').articles[$scope.artId];
+		
+		$scope.detailed = function() {
+            window.location.href = "#/newsItem/" + $scope.artId;
          };
-		 $scope.save = function() {
-			 SaveForLocal.addNewsItem($scope.newsItem);
-			 window.location.href = "index.html";
-         };*/
+		$scope.delete = function() {
+			var temp = localStorageService.get('lclSrc');
+			if (temp.articles > 0) {
+				alert(temp.articles.length);
+				temp.articles.splice($scope.artId,1);
+				alert(temp.articles.length);
+			}
+			localStorageService.set('lclSrc',temp);
+			window.location.href = "index.html";
+        };
      }
     ]
   });

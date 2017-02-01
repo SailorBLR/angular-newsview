@@ -1,1 +1,9 @@
-Edit news template
+<article>
+	<a href="/newsItem/{{artId}}"><img src="#" width="480px" alt=""/></a>
+	<h1>{{article.title}}</h1>
+	<h3>{{article.description}}</h3>
+	<div class="col-md-8">
+		<button id="saveButton" name="saveButton" class="btn btn-success" ng-click="detailed()">Detailed</button>
+		<button id="resetButton" name="resetButton" class="btn btn-danger" ng-click="delete()">Delete</button>
+    </div>
+</article>

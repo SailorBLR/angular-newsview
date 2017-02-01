@@ -16,6 +16,7 @@ angular.
 			 if(localStorageService.get('keyToSource') == null) {
 				$scope.currentSrc = response.data.sources[0].id;
 				localStorageService.set('keyToSource',$scope.currentSrc);
+				
 			 } else {
 				$scope.currentSrc = localStorageService.get('keyToSource');
 			 }

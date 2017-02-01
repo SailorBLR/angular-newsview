@@ -8,5 +8,6 @@ angular.module('newsView', [
   'newsItem',
   'LocalStorageModule',
   'createNews',
-  'editNews'
+  'editNews',
+  'laterNews'
 ]);

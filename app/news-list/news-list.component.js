@@ -24,6 +24,12 @@ angular.
 				$scope.articles = localStorageService.get('lclSrc').articles;
 		 }
         });
+		 $scope.addToLaterList = function(article,index) {
+			 var temp = localStorageService.get('lookAfter');
+			 article.parentId = index;
+			 temp.articles.push(article);
+			 localStorageService.set('lookAfter',temp);
+         };
 		
 	  }
     ]
