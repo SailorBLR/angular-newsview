@@ -230,7 +230,6 @@ footer p{
 	border-radius: 3px;
 	box-shadow: 0 2px 3px #ccc;
 	background-color: white;
-	*display:inline;
     zoom:1;
 }
 .singleArticle {
@@ -260,3 +259,30 @@ footer p{
 	width: 100%;
 	margin-bottom: 10px;
 }
+.business {
+	background-color:#8a8a7b;
+}
+ .entertainment {
+	 background-color:#f0f0e1;
+ } 
+ .gaming {
+	 background-color:#ffb973;
+ } 
+ .general {
+	 background-color:#ffffff;
+ } 
+ .music {
+	 background-color:#99ffff;
+ } 
+ .science-and-nature {
+	 background-color:#73ff73;
+ } 
+ .sport {
+	 background-color:#ff9999;
+ } 
+ .technology {
+	 background-color:#888888;
+ }
+ .local {
+	 background-color:#f0f0e1;
+ }

@@ -4,16 +4,19 @@ angular.
   module('newsView').
   config(['$locationProvider' ,'$routeProvider', 'localStorageServiceProvider',
     function config($locationProvider, $routeProvider, localStorageServiceProvider) {
-      $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode({
+		  enabled:true,
+		  requireBase: false
+		});
 	  localStorageServiceProvider
 		.setPrefix('newsView')
 		.setStorageType('sessionStorage');
       $routeProvider.
+		when('/', {
+          template: '<news-list class="view-frame"></news-list>'
+        }).
         when('/newsItem/:itemId', {
           template: '<news-item></news-item>'
-        }).
-		when('/index.html', {
-          template: '<news-list class="view-frame"></news-list>'
         }).
 		when('/sources', {
           template: '<news-list class="view-frame"></news-list>'
