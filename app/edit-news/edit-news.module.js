@@ -1,4 +1,4 @@
 'use strict';
 
-/**Create news module declaration (createNews)*/
+/**Create Edit news module declaration (editNews)*/
 angular.module('editNews', []);

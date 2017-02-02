@@ -1,6 +1,6 @@
 'use strict';
 
-/*News source select controller*/
+/**News source select controller. Makes request to API. GET list of sources*/
 angular.
   module('newsSource').
   component('newsSource',  {
@@ -12,8 +12,9 @@ angular.
 		 .get("https://newsapi.org/v1/sources?language=en")
 		 .then(function(response){
 			 $scope.sources = response.data.sources;
+			 
+			 //Adding local news source to 0 position
 			 $scope.sources.unshift(localStorageService.get('lclSrc'));
-			
 			 
 			 //Selecting news source. If not selected set local.
 			 

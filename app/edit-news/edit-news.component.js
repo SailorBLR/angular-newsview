@@ -10,10 +10,12 @@ angular.
 		$scope.artId = localStorageService.get('lclSrc').lastId;
 		$scope.article = localStorageService.get('lclSrc').articles[$scope.artId];
 		
+		//Redirects to detailed news view
 		$scope.detailed = function() {
 			localStorageService.set('sourceCurr',localStorageService.get('lclSrc').id);
             window.location.href = "#newsItem/" + $scope.artId;
          };
+		 //Deletes from application
 		$scope.delete = function() {
 			var temp = localStorageService.get('lclSrc');
 			if (temp.articles.length > 0) {

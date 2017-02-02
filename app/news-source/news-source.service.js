@@ -1,5 +1,5 @@
 'use strict';
-
+/**Performs data transfer between modules*/
 angular.
   module('newsSource').
   factory('PassSrc', function () {

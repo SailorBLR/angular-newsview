@@ -1,4 +1,4 @@
 'use strict';
 
-/**News list module declaration (newsList)*/
+/**News Item module declaration (newsItem)*/
 angular.module('newsItem', ['ngRoute']);

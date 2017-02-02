@@ -1,6 +1,6 @@
 'use strict';
 
-/*News view application register newsView*/
+/**News view application register newsView*/
 angular.module('newsView', [
   'ngRoute',
   'newsSource',

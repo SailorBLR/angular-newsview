@@ -1,6 +1,6 @@
 'use strict';
 
-/** Register `newsItem` component, along with its associated controller and template*/
+/** Registers `newsItem` component, along with its associated controller and template*/
 angular.
   module('newsItem').
   component('newsItem', {

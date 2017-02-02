@@ -1,4 +1,4 @@
 'use strict';
 
-/*Dropdown news source select*/
+/**Declaring the dropdown news source select*/
 angular.module('newsSource', []);

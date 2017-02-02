@@ -8,9 +8,13 @@ angular.
     controller: ['$scope', 'localStorageService', 'SaveForLocal',
      function CreateNewsController($scope, localStorageService, SaveForLocal) {
 		 $scope.defaultValues = {title: " ", description: " "};
+		 
+		 //Resets the values in a form
          $scope.reset = function() {
              $scope.newsItem = angular.copy($scope.defaultValues);
          };
+		 
+		 //Creates new item
 		 $scope.save = function() {
 			 SaveForLocal.addNewsItem($scope.newsItem);	 
 			 $scope.newsItem = SaveForLocal.getFullNewsItem();
@@ -18,7 +22,7 @@ angular.
 			 var temp = localStorageService.get('lclSrc');
 
 			 temp.lastId = last;
-			 localStorageService.set('lclSrc',temp);
+			 localStorageService.set('currSource',temp);
 			 
 			 window.location.href = "#/edit";
          };
