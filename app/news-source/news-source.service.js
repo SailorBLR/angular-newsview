@@ -4,14 +4,14 @@ angular.
   module('newsSource').
   factory('PassSrc', function () {
 
-    var srcId = ' ';
+    var source = ' ';
 
     return {
-        getSrcId: function () {
-            return srcId;
+        getSrc: function () {
+            return source;
         },
-        setSrcId: function (id) {
-            srcId = id;
+        setSrc: function (src) {
+            source = src;
         }
     };
 });

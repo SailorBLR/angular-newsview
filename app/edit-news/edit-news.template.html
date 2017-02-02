@@ -1,8 +1,13 @@
-<article>
-	<a href="/newsItem/{{artId}}"><img src="#" width="480px" alt=""/></a>
-	<h1>{{article.title}}</h1>
-	<h3>{{article.description}}</h3>
-	<div class="col-md-8">
+<article class="singleArticle">
+    <div id="wrapper">
+		<div style="float: left;"><h4>{{article.publishedAt}}</h4></div>
+		<div style="float: right;"><h4>{{article.author}}</h4></div>
+	</div>
+	<div id="desc-wrapper"">
+		<div style="float: left;"><h1>{{article.title}}</h1></div>
+		<div style="float: left; clear: left;"><h3>{{article.description}}</h3></div>
+	</div>
+	<div class="col-md-8" style="padding-bottom: 0;">
 		<button id="saveButton" name="saveButton" class="btn btn-success" ng-click="detailed()">Detailed</button>
 		<button id="resetButton" name="resetButton" class="btn btn-danger" ng-click="delete()">Delete</button>
     </div>

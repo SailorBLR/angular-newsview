@@ -1,4 +1,4 @@
-<select ng-model="currentSrc" >
-    <option value="{{source.id}}" ng-repeat="source in sources">{{source.name}}</option>
+
+<select data-ng-model="currentSrc"
+		data-ng-options="source.name for source in sources track by source.id">
 </select>
-	

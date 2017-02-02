@@ -13,19 +13,31 @@ angular.
 		 .then(function(response){
 			 $scope.sources = response.data.sources;
 			 $scope.sources.unshift(localStorageService.get('lclSrc'));
-			 if(localStorageService.get('keyToSource') == null) {
-				$scope.currentSrc = response.data.sources[0].id;
-				localStorageService.set('keyToSource',$scope.currentSrc);
+			
+			 
+			 //Selecting news source. If not selected set local.
+			 
+			 if(localStorageService.get('currSource') == null) {
+				$scope.currentSrc = $scope.sources[0];
+				localStorageService.set('currSource',$scope.currentSrc);
+				
+				//Else get from session
 				
 			 } else {
-				$scope.currentSrc = localStorageService.get('keyToSource');
+				 
+				 var temp = localStorageService.get('currSource');
+				 $scope.currentSrc = temp;
 			 }
-		 });
+			}
+		 );
+		 
+		 //Watching for the local storage changes
+		 
 		 $scope.$watch('currentSrc', function (newValue, oldValue) {
 		   if (newValue !== oldValue) {
-			   localStorageService.set('keyToSource',newValue);
+			   localStorageService.set('currSource',newValue);
 		   }
-		   PassSrc.setSrcId(localStorageService.get('keyToSource'));
+		   PassSrc.setSrc(localStorageService.get('currSource'));
          });
       }
     ]

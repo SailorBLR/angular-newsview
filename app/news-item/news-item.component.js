@@ -8,7 +8,7 @@ angular.
     controller: ['$http', '$scope', '$routeParams', 'localStorageService',
       function NewsItemController($http, $scope, $routeParams, localStorageService) {
 		var id = $routeParams.itemId;
-		var bigSrc = localStorageService.get('keyToSource');
+		var bigSrc = localStorageService.get('currSource').id;
 		var articles = [];
 		if ((bigSrc !== null) && (bigSrc !== localStorageService.get('lclSrc').id)) {
 			$http

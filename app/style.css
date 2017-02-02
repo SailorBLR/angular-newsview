@@ -120,27 +120,21 @@ nav li a:hover{
 	margin-top: 35px;
 }
 section{
-	width: 1000px;
+	width: 100%;
 	margin: auto;
 }
 #secwrapper{
 	/*background: url('images/bg.gif') fixed;
 	background-color: #f47771;*/ 
-	padding-top: 20px; 
+	padding-top: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+	width : 90%;
 }
 article{
-	width: 500px;
-	margin-right: 40px;
-	display: inline-block;
-	vertical-align: top;
-	border: 1px solid #c8c8c8;
-	margin-bottom: 20px;
-	padding: 7px;
-	border-radius: 3px;
-	box-shadow: 0 2px 3px #ccc;
+	width: 100%;
+	height: 100%;
 	background-color: white;
-	*display:inline;
-    zoom:1;
 }
 #sponsors, .rightcl{
 	margin-right: 0px;
@@ -220,4 +214,49 @@ footer p{
     display: inline;
     zoom: 1;
 }
-
+.ng-scope {
+	position : relative;
+	width : 100%;
+	height : 100%;
+}
+.blank , .singleArticle {
+	width: 30%;
+	margin-right: 40px;
+	display: inline-block;
+	vertical-align: top;
+	border: 1px solid #c8c8c8;
+	margin-bottom: 20px;
+	padding: 7px;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px #ccc;
+	background-color: white;
+	*display:inline;
+    zoom:1;
+}
+.singleArticle {
+	width: 80%;
+	margin-left : 10%;
+}
+.form-horizontal {
+	width: 60%;
+	margin-left: 20%;
+	vertical-align: top;
+	border: 1px solid #c8c8c8;
+	padding: 7px;
+	border-radius: 3px;
+	box-shadow: 0 2px 3px #ccc;
+	background-color: white;
+    zoom:1;
+}
+#wrapper {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 30px;
+}
+#desc-wrapper {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin-bottom: 10px;
+}

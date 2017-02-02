@@ -1,6 +1,11 @@
-<article>
-	<a href="/newsItem/{{artId}}"><img src="{{item.urlToImage}}" width="480px" alt=""/></a>
-	<h1>{{item.title}}</h1>
-	<h3>{{item.description}}</h3>
-	
+<article class="singleArticle">
+    <div id="wrapper">
+		<div style="float: left;"><h4>{{item.publishedAt}}</h4></div>
+		<div style="float: right;"><h4>{{item.author}}</h4></div>
+	</div>
+	<div id="desc-wrapper">
+		<div style="float: left;"><h1>{{item.title}}</h1></div>
+		<a href="/newsItem/{{artId}}" style="float : left; margin-right : 10px"><img src="{{item.urlToImage}}" width="480px" alt=""/></a>
+		<div style="margin-left: 10px; margin-top: 100px" align="left" vspace="5" hspace="5"><h3>{{item.description}}</h3></div>
+	</div>
 </article>
